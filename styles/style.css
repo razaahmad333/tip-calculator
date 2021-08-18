@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+.labels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.message {
+  position: relative;
+  top: 15px;
+  color: red;
+  display: none;
+}
+
+.logo {
+  display: block;
+  margin: 50px auto;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+body {
+  background-color: #cce9e9;
+  font-family: 'Space Mono', monospace;
+}
+
+.inputSubcard {
+  padding-right: 25px;
+  background-color: white;
+}
+
+.inputGroup .icon {
+  position: relative;
+  top: 32px;
+  left: 10px;
+  display: inline;
+}
+
+.inputGroup .label {
+  position: relative;
+  top: 15px;
+  font-weight: 500;
+}
+
+.inputGroup input {
+  font-weight: 800;
+  font-size: 1.2em;
+  display: block;
+  width: 98%;
+  color: #00494d;
+  caret-color: #26c0ab;
+  cursor: pointer;
+  height: 30px;
+  background-color: #f4fafa;
+  border: 2px solid #f4fafa;
+  border-radius: 5px;
+  text-align: right;
+}
+
+.inputGroup input:focus {
+  outline: none;
+  border: 2px solid #26c0ab;
+}
+
+.selectionGroup {
+  margin: 20px 0;
+}
+
+.selectionGroup .label {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.buttonContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.button {
+  cursor: pointer;
+  text-align: center;
+  padding: 8px;
+  color: white;
+  font-weight: 900;
+  border-radius: 5px;
+  background-color: #00494d;
+}
+
+.button:hover {
+  background-color: #c5e4e7;
+  color: #26c0ab;
+}
+
+.button:active {
+  background-color: #26c0ab;
+  color: #00494d;
+}
+
+.buttonInput {
+  border: 2px solid #f4fafa;
+  width: 85%;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1.2em;
+  padding: 8px;
+  color: #5e7a7d;
+  font-weight: 700;
+  border-radius: 5px;
+  background-color: #f4fafa;
+}
+
+.buttonInput:focus {
+  text-align: right;
+  outline: none;
+  border-color: #26c0ab;
+  color: #00494d;
+  caret-color: #26c0ab;
+}
+
+.outputSubcard {
+  border-radius: 10px;
+  background-color: #00494d;
+}
+
+.mainCard {
+  padding: 20px;
+  background-color: white;
+  width: 60%;
+  border-radius: 15px;
+  margin: 100px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.amountDetails {
+  width: 80%;
+  margin: 10px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.amountType {
+  padding-top: 20px;
+}
+
+.amountType .total {
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 800;
+}
+
+.amountType .person {
+  color: rgba(248, 245, 245, 0.726);
+  font-size: 12px;
+}
+
+.amount {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #26c0ab;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.resetButton {
+  text-align: center;
+  padding: 10px 0;
+  font-weight: 900;
+  border-radius: 5px;
+  background-color: #26c0ab;
+  width: 80%;
+  margin: 20px auto;
+  margin-top: 120px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.resetButton:hover {
+  background-color: #c5e4e7;
+}
+
+@media only screen and (max-width: 800px) {
+  .mainCard {
+    padding: 5px 15px;
+    width: 90%;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .buttonContainer {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .outputSubcard {
+    margin-top: 20px;
+  }
+  .resetButton {
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .logo {
+    display: block;
+    margin: 20px auto;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .amount {
+    font-size: 30px;
+  }
+  .mainCard {
+    padding: 5px 15px;
+    width: 90%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .buttonContainer {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .outputSubcard {
+    margin-top: 20px;
+  }
+  .resetButton {
+    margin-bottom: 20px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

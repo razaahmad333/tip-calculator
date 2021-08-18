@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Tip calculator app</title>
+    <link rel="stylesheet" href="./styles/style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <img src="./images/logo.svg" alt="logo" class="logo" />
+    <div class="mainCard">
+      <div class="inputSubcard">
+        <div class="inputGroup">
+          <div class="label">Bill</div>
+          <div class="icon">
+            <img src="./images/icon-dollar.svg" alt="$" />
+          </div>
+          <div class="inputForm">
+            <input type="number" id="bill" />
+          </div>
+        </div>
+
+        <div class="selectionGroup">
+          <div class="label">Select Tip %</div>
+          <div class="buttonContainer">
+            <div class="button">5%</div>
+            <div class="button">10%</div>
+            <div class="button">15%</div>
+            <div class="button">25%</div>
+            <div class="button">50%</div>
+            <div>
+              <input
+                type="number"
+                name="custom"
+                id="customTip"
+                placeholder="Custom"
+                class="buttonInput"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="inputGroup">
+          <div class="labels">
+            <div class="label">Number of people</div>
+            <div class="message" id="message">Cant be zero</div>
+          </div>
+          <div class="icon">
+            <img src="./images/icon-person.svg" alt="$" />
+          </div>
+          <div class="inputForm">
+            <input type="number" id="nPeople" />
+          </div>
+        </div>
+      </div>
+      <div class="outputSubcard">
+        <div class="amountDetails">
+          <div class="amountType">
+            <div class="total">Tip Amount</div>
+            <div class="person">/ person</div>
+          </div>
+          <div class="amount" id="tipPerPerson">$ 0.00</div>
+        </div>
+        <div class="amountDetails">
+          <div class="amountType">
+            <div class="total">Total</div>
+            <div class="person">/ person</div>
+          </div>
+          <div class="amount" id="totalAmountPerPerson">$ 0.00</div>
+        </div>
+        <div class="resetButton" id="resetButton">RESET</div>
+      </div>
+    </div>
+
+    <footer>Ahmad Raza</footer>
+  </body>
+</html>

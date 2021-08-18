@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+$strongCyan:hsl(172, 67%, 45%);
+
+$White: hsl(0, 0%, 100%);
+
+$veryDarkCyann:hsl(183, 100%, 15%);
+$darkGrayishCyan1:hsl(186, 14%, 43%);
+$darkGrayishCyan2: hsl(184, 14%, 56%);
+$lightGrayishCyan1:hsl(185, 41%, 84%);
+$lightGrayishCyan2:hsl(189, 41%, 97%);
+
+.labels{
+    display: flex;
+    justify-content: space-between;
+}
+
+.message{
+    position: relative;
+    top: 15px;
+    color: red;
+    display: none;
+}
+
+.logo{
+    display: block;
+    margin: 50px auto;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+
+body{
+    background-color: rgb(204, 233, 233);
+    font-family: 'Space Mono', monospace;
+}
+
+.inputSubcard{
+    padding-right: 25px;
+    background-color: white;
+}
+
+.inputGroup{
+    .icon{
+        position: relative;
+        top: 32px;
+        left: 10px;
+        display: inline ;
+    }
+    .label{
+        position: relative;
+        top: 15px;
+        font-weight: 500;
+    }
+    input{
+        font-weight: 800;
+        font-size: 1.2em;
+        display: block;
+        width: 98%;
+        color: $veryDarkCyann;
+        caret-color: $strongCyan;
+        
+        cursor: pointer;
+        height: 30px;
+        background-color: $lightGrayishCyan2;
+        border: 2px solid $lightGrayishCyan2;
+        border-radius: 5px;
+        text-align: right;
+        &:focus{
+            outline: none;
+            border: 2px solid $strongCyan;
+        }
+    }
+
+}
+
+
+.selectionGroup{
+    margin: 20px 0;
+    .label{
+        margin-bottom: 10px;
+        font-weight: 800;
+    }
+}
+.buttonContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.button{
+    cursor: pointer;
+    text-align: center;
+    padding: 8px;
+    color: white;
+    font-weight: 900;
+    border-radius: 5px;
+    background-color:$veryDarkCyann;
+    &:hover{
+        background-color: $lightGrayishCyan1;
+        color: $strongCyan;
+    }
+    &:active{
+        background-color:$strongCyan;
+        color: $veryDarkCyann;
+    }
+
+    
+}
+
+.buttonInput{
+    border: 2px solid $lightGrayishCyan2;
+    width: 85%;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.2em;
+    padding: 8px;
+    color: $darkGrayishCyan1;
+    font-weight: 700;
+    border-radius: 5px;
+    background-color:$lightGrayishCyan2;
+
+    &:focus{
+        text-align: right;
+        outline: none;
+        border-color: $strongCyan;
+        color: $veryDarkCyann;
+        caret-color: $strongCyan;
+    }
+
+    
+}
+
+
+.outputSubcard{
+    border-radius: 10px;
+
+    background-color: $veryDarkCyann;
+}
+
+.mainCard{
+    padding: 20px;
+    background-color:white;
+    width: 60%;
+    border-radius: 15px;
+    margin: 100px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+
+.amountDetails{
+    // background-color: red;
+    width: 80%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.amountType{
+    padding-top: 20px;
+
+    // background-color: green;
+    .total{
+        color: white;
+        margin-bottom: 5px;
+        font-weight: 800;
+    }
+    .person{
+        color: rgba(248, 245, 245, 0.726);
+        font-size: 12px;
+    }
+}
+
+.amount{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $strongCyan;
+        font-size: 40px;
+        font-weight: 900;
+}
+
+.resetButton{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 900;
+    border-radius: 5px;
+    background-color: $strongCyan;
+    width: 80%;
+    margin: 20px auto;
+    margin-top: 120px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    &:hover{
+        background-color: $lightGrayishCyan1;
+        // background-color: $darkGrayishCyan2;
+    }
+}
+
+@media only screen and (max-width:800px){
+    .mainCard{
+        padding: 5px 15px;
+        width: 90%;
+        grid-template-columns: 1fr 1fr;
+    }
+    .buttonContainer{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .outputSubcard{
+        margin-top: 20px;
+    }
+    .resetButton{
+        // margin-top: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+ 
+
+@media only screen and (max-width:480px){
+
+    .logo{
+        display: block;
+        margin: 20px auto;
+        margin-bottom: 0;
+        text-align: center;
+    }
+    
+    .amount{
+        font-size: 30px;
+    }
+    .mainCard{
+        padding: 5px 15px;
+        width: 90%;
+        grid-template-columns: 1fr;
+    }
+    .buttonContainer{
+        grid-template-columns: 1fr 1fr;
+    }
+    .outputSubcard{
+        margin-top: 20px;
+    }
+
+    .resetButton{
+        // margin-top: 100px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+ 
